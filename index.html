@@ -4,8 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guess Number</title>
-    <link  href="./app.js" rel="javascript" type="text/javascript">
+   
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
         .main{
             display: flex;
             justify-content: center;
@@ -13,6 +19,7 @@
             height: 100vh;
             background-color: #f0f0f0;
         }
+       
         .container {
             text-align: center;
             background-color: #fff;
@@ -20,15 +27,42 @@
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
+        .container:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            transform: translateY(-5px);
+            transition: 0.5s ease;
+        }
+        .container button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .container button:hover{
+            transform: scale(1.05);
+            background-color: #0056b3;
+            transition: 0.5s;
+         }
+         #result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: green;
+         }
     </style>
 </head>
 <body>
     <div class="main">
         <div class="container">
             <h1>Guess the Number</h1>
-            <p>Try to guess the number</p>
-            
-          
+            <p>Try to guess the number </p>
+            <button onclick="checkGuess()">Guess</button>
+          <p id="result"></p>
     </div>
+
+    <script src="./app.js"></script>
 </body>
 </html>
