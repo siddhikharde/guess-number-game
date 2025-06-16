@@ -2,16 +2,16 @@
 function checkGuess() {
     const max=parseInt(prompt("Enter the maximum number:"));
     const randomNumber= Math.floor(Math.random()*max)+1;
-    let guess = parseInt(prompt("Guess a number between 1 and " +max + ":"));
+    let guess = prompt("Guess a number between 1 and " +max + ":");
     
     while (true) {
 
-      if (guess === null || guess == "quit"){
-        document.getElementById("result").innerText="Game cancelled.";
+      if (guess === null || guess.toLowerCase() == "quit"){
+        document.getElementById("result").innerText="User quit the game.";
         break;
       }
 
-      if (isNaN(guess) || guess < 1 || guess > max) {
+      if ( guess < 1 || guess > max) {
         document.getElementById("result").innerText="Invalid input. Please enter a number between 1 and " + max + ".";
         guess = parseInt(prompt("Guess a number between 1 and " + max + ":"));
       }

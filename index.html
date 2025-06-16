@@ -52,15 +52,20 @@
             font-weight: bold;
             color: green;
          }
+         marquee{
+            color:red ;
+         }
     </style>
 </head>
 <body>
     <div class="main">
         <div class="container">
+            
             <h1>Guess the Number</h1>
             <p>Try to guess the number </p>
             <button onclick="checkGuess()">Guess</button>
           <p id="result"></p>
+          <marquee behavior="scroll" scrolldelay="15ms" direction="right">Tip:Enter "quit" to terminate the game.</marquee>
     </div>
 
     <script src="./app.js"></script>
